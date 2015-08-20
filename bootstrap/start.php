@@ -18,13 +18,17 @@ $app = new Illuminate\Foundation\Application;
 | Detect The Application Environment
 |--------------------------------------------------------------------------
 |
-| Automatically detect remote enviornment.
+| Laravel takes a dead simple approach to your application environments
+| so you can just specify a machine name for the host that matches a
+| given environment, then we will automatically detect it for you.
 |
 */
 
-$env = $app->detectEnvironment(function () {
-	return isset($_ENV['OPENSHIFT_PHP_DIR']) ? 'production' : 'local';
-});
+$env = $app->detectEnvironment(array(
+
+	'local' => array('homestead'),
+
+));
 
 /*
 |--------------------------------------------------------------------------

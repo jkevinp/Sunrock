@@ -1,14 +1,13 @@
-<!DOCTYPE html>
-<html lang="en-US">
-	<head>
-		<meta charset="utf-8">
-	</head>
-	<body>
-		<h2>Password Reset</h2>
+@extends('layout.email')
+@section('salutations')
+Dear {{$Firstname}} {{$Middlename}} {{$Lastname}},
+@stop
+@section('content')
+<hr>
+You have requested a password reset.<br/>
+<b>Login Id</b>: {{$email}} <br/>
+To change your password, please click the Link below<br/>
+{{HTML::link(URL::action('account.reset', ['code' => $confirmation_code]))}}<br/>
+<hr>
 
-		<div>
-			To reset your password, complete this form: {{ URL::to('password/reset', array($token)) }}.<br/>
-			This link will expire in {{ Config::get('auth.reminder.expire', 60) }} minutes.
-		</div>
-	</body>
-</html>
+@stop

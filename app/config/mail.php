@@ -13,9 +13,6 @@ return array(
 	|
 	| Supported: "smtp", "mail", "sendmail", "mailgun", "mandrill", "log"
 	|
-	| OpenShift Recommended:
-	|   SendGrid: https://developers.openshift.com/en/marketplace-sendgrid.html#php-laravel
-	|
 	*/
 
 	'driver' => 'smtp',
@@ -31,7 +28,7 @@ return array(
 	|
 	*/
 
-	'host' => 'smtp.mailgun.org',
+	'host' => 'smtp.gmail.com',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -57,7 +54,7 @@ return array(
 	|
 	*/
 
-	'from' => array('address' => null, 'name' => null),
+	'from' => array('address' => 'mail.sunrock@gmail.com', 'name' => 'Sunrock resort'),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -83,7 +80,7 @@ return array(
 	|
 	*/
 
-	'username' => null,
+	'username' => 'mail.sunrock@gmail.com',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -96,7 +93,7 @@ return array(
 	|
 	*/
 
-	'password' => null,
+	'password' => 'admin123!',
 
 	/*
 	|--------------------------------------------------------------------------

@@ -12,9 +12,7 @@ return array(
 	| application. If disabled, a simple generic error page is shown.
 	|
 	*/
-
-	'debug' => getenv('APPLICATION_ENV') == 'development' ? true : false,
-
+	'debug' => true,
 	/*
 	|--------------------------------------------------------------------------
 	| Application URL
@@ -25,9 +23,7 @@ return array(
 	| your application so that it is used when running Artisan tasks.
 	|
 	*/
-
-	'url' => 'https://' . getenv('OPENSHIFT_APP_DNS') . '/',
-
+	'url' => 'http://localhost',
 	/*
 	|--------------------------------------------------------------------------
 	| Application Timezone
@@ -53,7 +49,6 @@ return array(
 	*/
 
 	'locale' => 'en',
-
 	/*
 	|--------------------------------------------------------------------------
 	| Application Fallback Locale
@@ -64,9 +59,7 @@ return array(
 	| the language folders that are provided through your application.
 	|
 	*/
-
 	'fallback_locale' => 'en',
-
 	/*
 	|--------------------------------------------------------------------------
 	| Encryption Key
@@ -74,14 +67,11 @@ return array(
 	|
 	| This key is used by the Illuminate encrypter service and should be set
 	| to a random, 32 character string, otherwise these encrypted strings
-	| will not be safe.
+	| will not be safe. Please do this before deploying an application!
 	|
 	*/
-
-	'key' => substr(getenv('OPENSHIFT_SECRET_KEY'), 0, 31),
-
+	'key' => 'j6BAI1hjdT3oCx1Dh4kVb2X36fMud0MF',
 	'cipher' => MCRYPT_RIJNDAEL_128,
-
 	/*
 	|--------------------------------------------------------------------------
 	| Autoloaded Service Providers
@@ -121,9 +111,23 @@ return array(
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
-
+		
+		'Way\Generators\GeneratorsServiceProvider',
+		'Sunrock\Providers\BookingEventServiceProvider',
+		'Sunrock\Providers\MailsServiceProvider',
+		'Sunrock\Providers\BookingDetailsEventServiceProvider',
+		'Sunrock\Providers\AccountServiceProvider',
+		'Sunrock\Providers\BookingServiceProvider',
+		'Sunrock\Providers\ProductServiceProvider',
+		'Sunrock\Providers\TransactionServiceProvider',
+		'Sunrock\Providers\CouponServiceProvider',
+		'Sunrock\Providers\FileServiceProvider',
+		'Sunrock\Providers\ProductTypeServiceProvider',
+		'Sunrock\Providers\SaleServiceProvider',
+		'Barryvdh\DomPDF\ServiceProvider',
 	),
-
+//'Liebig\Cron\CronServiceProvider',
+//		'Intervention\Image\ImageServiceProvider',
 	/*
 	|--------------------------------------------------------------------------
 	| Service Provider Manifest
@@ -188,7 +192,11 @@ return array(
 		'URL'               => 'Illuminate\Support\Facades\URL',
 		'Validator'         => 'Illuminate\Support\Facades\Validator',
 		'View'              => 'Illuminate\Support\Facades\View',
+		'Carbon' 			=> 'Carbon\Carbon',
+		
+		'PDF' 				=> 'Barryvdh\DomPDF\Facade',
 
 	),
-
+//'Image' 			=> 'Intervention\Image\Facades\Image',
+//https://github.com/barryvdh/laravel-dompdf
 );

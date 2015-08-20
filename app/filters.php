@@ -32,42 +32,63 @@ App::after(function($request, $response)
 | integrates HTTP Basic authentication for quick, simple checking.
 |
 */
-
-Route::filter('auth', function()
-{
-	if (Auth::guest())
-	{
-		if (Request::ajax())
+Route::filter('account_role', function()
+{ 
+	if(Auth::user()->usergroupid !== 2)
+	 {
+	    if (Request::ajax())
 		{
-			return Response::make('Unauthorized', 401);
+				return Response::make('Unauthorized', 401);
 		}
 		else
 		{
-			return Redirect::guest('login');
+				return Redirect::guest('account/login')->withErrors('You are trying to go to a protected page. Please login to continue.');
 		}
 	}
 });
 
-
+Route::filter('auth.user', function()
+{
+	if (Auth::guest())
+	{
+		if (Request::ajax())return Response::make('Unauthorized', 401);
+		else return Redirect::guest('account/login')->withErrors('You are trying to go to a protected page. Please login to continue.');
+	}
+	else
+	{
+		if(Auth::user()->usergroupid !== 2)
+		{
+			Auth::logout();
+			return Redirect::to('/')->withErrors('You are trying to enter a page that is not suited for your account');
+		}
+	}
+});
+Route::filter('auth.admin', function()
+{
+	if (Auth::guest())
+	{
+		if (Request::ajax())return Response::make('Unauthorized', 401);
+		else return Redirect::guest('access/admin')->withErrors('You are trying to go to a protected page. Please login to continue.');
+	}
+	else
+	{
+		if(Auth::user()->usergroupid == 2)
+		{
+			Auth::logout();
+			return Redirect::to('/')->withErrors('You are trying to enter a page that is not suited for your account');
+		}
+	}
+});
 Route::filter('auth.basic', function()
 {
 	return Auth::basic();
 });
-
-/*
-|--------------------------------------------------------------------------
-| Guest Filter
-|--------------------------------------------------------------------------
-|
-| The "guest" filter is the counterpart of the authentication filters as
-| it simply checks that the current user is not logged in. A redirect
-| response will be issued if they are, which you may freely change.
-|
-*/
-
 Route::filter('guest', function()
 {
-	if (Auth::check()) return Redirect::to('/');
+	if (Auth::check()) {
+		if(Auth::user()->usergroupid == 2) return Redirect::route('account.dashboard')->with('flash_message', 'You are already logged in!');
+		return Redirect::route('cpanel.dashboard')->with('flash_message', 'You are already logged in!');
+	}
 });
 
 /*

@@ -50,6 +50,10 @@ App::error(function(Exception $exception, $code)
 {
 	Log::error($exception);
 });
+App::missing(function($exception)
+{
+    return View::make('default.static.404');
+});
 
 /*
 |--------------------------------------------------------------------------

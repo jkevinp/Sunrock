@@ -1,6 +1,10 @@
 <?php
 
 define('LARAVEL_START', microtime(true));
+define('HOST', 'localhost:8080/Sunrock/');
+define('APP_RESOURCES',HOST.'public/');
+define('APP_DEFAULT', APP_RESOURCES.'default/');
+define('APP_NAME', 'Sunrock Resort');
 
 /*
 |--------------------------------------------------------------------------
