@@ -54,7 +54,7 @@ return array(
 
 		'mysql' => array(
 			'driver'    => 'mysql',
-			'host'      => 'mysql://$OPENSHIFT_MYSQL_DB_HOST:$OPENSHIFT_MYSQL_DB_PORT/',
+			'host'      => DB_HOST,
 			'database'  => 'sunrock',
 			'username'  => 'adminlwYpXaX',
 			'password'  => 'nSAbUkBTEcqy',
