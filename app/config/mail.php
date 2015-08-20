@@ -28,7 +28,7 @@ return array(
 	|
 	*/
 
-	'host' => 'smtp.gmail.com',
+	'host' => 'smtp.sunrockresorts.com',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -54,7 +54,7 @@ return array(
 	|
 	*/
 
-	'from' => array('address' => 'mail.sunrock@gmail.com', 'name' => 'Sunrock resort'),
+	'from' => array('address' => 'no-reply@sunrockresorts.com', 'name' => 'Sunrock resort'),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -80,7 +80,7 @@ return array(
 	|
 	*/
 
-	'username' => 'mail.sunrock@gmail.com',
+	'username' => 'no-reply@sunrockresorts.com',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -93,7 +93,7 @@ return array(
 	|
 	*/
 
-	'password' => 'admin123!',
+	'password' => 'Laravel001',
 
 	/*
 	|--------------------------------------------------------------------------
