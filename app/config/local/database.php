@@ -22,10 +22,10 @@ return array(
 
 		'mysql' => array(
 			'driver'    => 'mysql',
-			'host'      => 'localhost',
-			'database'  => 'sunrockdb',
-			'username'  => 'root',
-			'password'  => '',
+			'host'      => 'mysql://$OPENSHIFT_MYSQL_DB_HOST:$OPENSHIFT_MYSQL_DB_PORT/',
+			'database'  => 'sunrock',
+			'username'  => 'adminlwYpXaX',
+			'password'  => 'nSAbUkBTEcqy',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
