@@ -1,4 +1,5 @@
 var url = "http://localhost:8000/ajax/";
+url = "http://sunrock-sunrock.rhcloud.com/ajax/";
 
 var chart = Morris.Bar({
     // ID of the element in which to draw the chart.
