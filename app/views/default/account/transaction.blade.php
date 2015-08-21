@@ -46,7 +46,7 @@
             </tr>
             <tr>
                 <td colspan=2  width=100%>
-                {{ Form::textarea('notes', null, ['class' => 'form-control','size' => '300x10' ,'style' => 'resize:none;witdh:100%;height:300px', 'placeholder' => 'Notes or message to the staff(optional)']) }}
+                {{ Form::textarea('notes', null, ['class' => 'form-control','size' => '300x10' ,'style' => 'resize:none;witdh:100%;height:300px', 'placeholder' => 'Notes or message to the staff. Indicate what bank did you used.']) }}
                 </td>
             </tr>
             <tr>

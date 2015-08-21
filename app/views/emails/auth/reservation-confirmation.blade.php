@@ -15,7 +15,19 @@ Please follow the instructions carefully to confirm your reservation.
 		{{$fee}}
 	@endif
 </u> through paypal or via bank deposit.
-<br/><br/> To pay via bank, deposit the required bill to bank account #A3kF-2DAC-3DEF to any BPI Banks nationwide.
+<br/><br/> To pay via bank, deposit the required bill to any of the following banks nationwide.
+<br/>
+<br/>
+BPI FAMILY<br/>
+Account Number: 6436045555<br/><br/>
+METRO BANK<br/>
+Account Number: 402-3-402-33221-3<br/><br/>
+BDO<br/>
+Account Number: 6630127632<br/><br/>
+<strong>Name: Wilfredo E. Solapco</strong>
+<br/>
+<b>Please indicate at the comment box what bank you deposit/payed the bill.</b>
+<br/>
 <br/>To pay via paypal, Login your paypal and send a payment to manuelburce@yahoo.com
 <br/><hr>
 <b>Once, we've received/confirmed your payment. The reservation will be confirmed and activated.</b>

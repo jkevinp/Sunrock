@@ -5,7 +5,7 @@ use Illuminate\Auth\Reminders\RemindableTrait;
 use Illuminate\Auth\Reminders\RemindableInterface;
 
 
-class booking extends Eloquent implements UserInterface, RemindableInterface {
+class Booking extends Eloquent implements UserInterface, RemindableInterface {
 
 	use UserTrait, RemindableTrait;
 	public $timestamps = true;
@@ -31,7 +31,7 @@ class booking extends Eloquent implements UserInterface, RemindableInterface {
 	    return $this->account;
 	}
 	public function bookingdetails(){
-		return $this->hasMany('bookingdetails', 'bookingreferenceid' ,'bookingid');
+		return $this->hasMany('BookingDetails', 'bookingreferenceid' ,'bookingid');
 	}
 	//Scopes
 	public function scopeCreatedAscending($query){

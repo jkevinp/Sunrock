@@ -13,7 +13,7 @@ class Mails extends Eloquent implements UserInterface, RemindableInterface
 
 	public function account()
 	{ 
-		return $this->belongsTo('account');
+		return $this->belongsTo('Account');
 	}
 	public function scopeCreatedAscending($query)
     {

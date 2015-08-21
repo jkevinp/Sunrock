@@ -48,14 +48,14 @@ class Account extends Eloquent implements UserInterface, RemindableInterface
 	}*/
 	public function booking()
 	{
-		return $this->hasMany('booking');
+		return $this->hasMany('Booking');
 	}
 	public function mails()
 	{
-		return $this->hasMany('mails', 'receiveremail', 'email');	
+		return $this->hasMany('Mails', 'receiveremail', 'email');	
 	}
 	public function transaction()
 	{
-		return $this->hasMany('transactions');
+		return $this->hasMany('Transactions');
 	}
 }

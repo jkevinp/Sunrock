@@ -12,7 +12,7 @@ class Transactions extends Eloquent implements UserInterface, RemindableInterfac
 	protected $table = 'transactions';
 	public function account()
 	{
-		return $this->belongsTo('account' , 'account_id');
+		return $this->belongsTo('Account' , 'account_id');
 	}
 public function scopeCreatedAscending($query)
     {
