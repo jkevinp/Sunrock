@@ -196,7 +196,6 @@ $('#select-bookingid').on('change', function(e){
        $('#submit-paypal').fadeOut();
        if(value == 0){
             bootbox.alert('<h3>I need an ID!</h3><hr/>Please select a valid Booking ID');
-
        }else{
             if(isNaN(t.attr('data-totalBill'))){
                 bootbox.confirm('Fee is not valid. Cannot continue, Please contact admin.' , function(res){
@@ -211,7 +210,7 @@ $('#select-bookingid').on('change', function(e){
                 }else if(t.attr('data-paymentmode') == 'half'){
                     downpayment = t.attr('data-totalBill') * 0.50;
                 }
-                downpayment = downpayment.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
+                downpayment = parseFloat(downpayment).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
                 $('#book-paymentmode').val((t.attr('data-paymentmode').toUpperCase()) + ' payment');
                 $('#book-totalbill').val((t.attr('data-totalBill').toUpperCase()));
                 $('#book-downpayment').val(downpayment);
