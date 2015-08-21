@@ -42,6 +42,16 @@ return array(
 	| so make sure you have the driver for your particular database of
 	| choice installed on your machine before you begin development.
 	|
+	'mysql' => array(
+			'driver'    => 'mysql',
+			'host'      => DB_HOST,
+			'database'  => 'sunrock',
+			'username'  => 'adminlwYpXaX',
+			'password'  => 'nSAbUkBTEcqy',
+			'charset'   => 'utf8',
+			'collation' => 'utf8_unicode_ci',
+			'prefix'    => '',
+		),
 	*/
 
 	'connections' => array(
@@ -55,9 +65,9 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => DB_HOST,
-			'database'  => 'sunrock',
-			'username'  => 'adminlwYpXaX',
-			'password'  => 'nSAbUkBTEcqy',
+			'database'  => DB_NAME,
+			'username'  => DB_USER,
+			'password'  => DB_PASS,
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',

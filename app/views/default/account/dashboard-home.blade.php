@@ -177,6 +177,7 @@ URLS EDIT
                             </div>
                             <div class="panel-body">
                                 <div class="list-group">
+                                    @if($booking)
                                 	@foreach ($booking as $book)
                                     <span class="list-group-item">
                                          <div class="btn-group pull-right" role="group" aria-label="...">
@@ -211,6 +212,7 @@ URLS EDIT
                                     	</ul>
                                     </span>
                                     @endforeach
+                                    @endif
                                 </div>
                                 <div class="text-right">
                                     <a href="#">View All Activity <i class="fa fa-arrow-circle-right"></i></a>
