@@ -2,7 +2,7 @@
 
 @section('content')
     <!-- Header -->
-    <div class="intro-header">
+    <div class="intro-header-home">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
