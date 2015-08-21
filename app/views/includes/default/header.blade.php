@@ -27,7 +27,7 @@
                 </a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs">
+            <div class="collapse navbar-collapse   " id="bs">
                 <ul class="nav navbar-nav navbar-right">
                     <li> 
                         <a href="#" data-toggle="modal" data-target="#reservationModal" data-whatever=""><i class="fa fa-github fa-fw"></i> Reservation List</a>
@@ -42,9 +42,9 @@
                     <li>
                         <a href="#" data-toggle="modal" data-target="#contactModal" data-whatever=""><i class="glyphicon glyphicon-phone-alt" aria-hidden="true"></i> Contact</a>
                     </li>
-                    <li>
-                        {{HTML::linkRoute('account.login', 'Login' ,null, array('class' => ''))}}
-                    </li> 
+                     <li>
+                        <a href="{{URL::action('account.login')}}"><i class="fa fa-sign-in" aria-hidden="true"></i>  User's Login</a>
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -59,7 +59,8 @@
             {{Form::open(['route' => 'guest.mail.create' , 'method' => 'post'])}}
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             <h4 class="modal-title" id="contactModalLabel">Contact Us</h4>
-              For assistance more or urgent matters, please call or text  Tel: 696-4316 Mobile: 0927-500-5257 
+              For urgent matters, please call or text  <br/><strong>Tel: 696-4316</strong>
+              <br/> <strong>Mobile: 0927-500-5257 </strong>
           </div>
           <div class="modal-body">
               <div class="form-group">

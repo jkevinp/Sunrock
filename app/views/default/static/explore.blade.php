@@ -80,10 +80,9 @@
 </div>
 
 <br/>
-    <legend>
-        
-    </legend>   
-    @foreach($rooms as $room)
+ <div class="row well well-lg">
+    <h3 align="center">Admission</h3>  
+    @foreach($pools as $room)
     <div class="col-md-4">
         <div class="thumbnail">
             <a data-lightbox="image-1"class="example-image-link" data-title="{{$room['productname']}}<hr>{{$room['productdesc']}}" href="{{URL::asset('default/img-uploads')}}/{{$room['imagename']}}" >
@@ -92,6 +91,34 @@
         </div>             
     </div>
     @endforeach
+  </div>
+ <div class="row well well-lg">
+ <h3 align="center">Cottages</h3> 
+
+  @foreach($cottages as $room)
+    <div class="col-md-4">
+        <div class="thumbnail">
+            <a data-lightbox="image-1"class="example-image-link" data-title="{{$room['productname']}}<hr>{{$room['productdesc']}}" href="{{URL::asset('default/img-uploads')}}/{{$room['imagename']}}" >
+                <img src="{{URL::asset('default/img-uploads')}}/{{$room['imagename']}}"  class="example-image img-responsive" width="320px" height="320px"/>
+            </a>
+        </div>             
+    </div>
+    @endforeach
+  </div>
+   <div class="row well well-lg">
+    <h3 align="center">Rooms</h3><hr />
+     @foreach($rooms as $room)
+    <div class="col-md-4">
+        <div class="thumbnail">
+            <a data-lightbox="image-1" class="example-image-link" data-title="{{$room['productname']}}<hr>{{$room['productdesc']}}" href="{{URL::asset('default/img-uploads')}}/{{$room['imagename']}}" >
+                <img src="{{URL::asset('default/img-uploads')}}/{{$room['imagename']}}"  class="example-image img-responsive" width="320px" height="320px"/>
+            </a>
+        </div>             
+    </div>
+    @endforeach
+  </div>
+
+
     
 @stop
 

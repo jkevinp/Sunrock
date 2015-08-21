@@ -46,11 +46,9 @@
             </div>
 
         </div>
-        <!-- /.container -->
-
     </div>
 
-    <!-- /.content-section-a -->
+    
     <div class="content-section-b">
         <div class="container">
             <div class="row">
@@ -64,11 +62,10 @@
                     <img class="img-responsive" src="{{URL::asset('default')}}/img/1.jpg" alt="">
                 </div>
             </div>
-
         </div>
-        <!-- /.container -->
     </div>
-    <!-- /.content-section-b -->
+
+   
     <div class="content-section-a">
         <div class="container">
             <div class="row">
@@ -82,12 +79,10 @@
                     <img class="img-responsive" src="{{URL::asset('default')}}/img/2.jpg" alt="">
                 </div>
             </div>
-
         </div>
-        <!-- /.container -->
     </div>
 
-       <a name="booknow" id="booknow">
+    <a name="booknow" id="booknow">
     @include('includes.form.form-date')
     
     <legend></legend>
@@ -100,24 +95,16 @@
                 <div class="col-lg-6">
                     <ul class="list-inline banner-social-buttons">
                         <li>
-                            <a href="#" class="btn btn-primary btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+                            <a href="http://sunrockresort.com/" class="btn btn-primary btn-lg"><i class="fa fa-firefox fa-fw"></i> <span class="network-name">Website</span></a>
                         </li>
                         <li>
                             <a href="https://www.facebook.com/pages/Sunrock-Resort/100202060037233?ref=br_tf" class="btn btn-default btn-lg"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Facebook</span></a>
                         </li>
-                        <li>
-                            <a href="#" class="btn btn-success btn-lg"><i class="fa fa-instagram fa-fw"></i> <span class="network-name">2</span></a>
-                        </li>
                     </ul>
                 </div>
             </div>
-
         </div>
-        <!-- /.container -->
-
     </div>
-    <!-- /.banner -->
-    <!-- /.content-section-a -->
  
    
 @stop
