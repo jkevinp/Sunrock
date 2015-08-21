@@ -1,5 +1,5 @@
 var url = "http://localhost:8000/ajax/";
-url = "http://sunrock-sunrock.rhcloud.com/ajax/";
+url = "http://sunrockresorts.com/ajax/";
 
 var chart = Morris.Bar({
     // ID of the element in which to draw the chart.
@@ -46,7 +46,7 @@ var chart2 = Morris.Bar({
     	chart1.setData(data);
     },
     error: function (jqXHR, textStatus, errorThrown) {
-         alert(errorThrown);
+         alert(textStatus + errorThrown);
       }
     });
 
@@ -58,7 +58,7 @@ var chart2 = Morris.Bar({
         chart.setData(data);
     },
     error: function (jqXHR, textStatus, errorThrown) {
-         alert(errorThrown);
+         alert(textStatus + errorThrown);
       }
     }); 
  $.ajax({    
@@ -69,6 +69,6 @@ var chart2 = Morris.Bar({
         chart2.setData(data);
     },
     error: function (jqXHR, textStatus, errorThrown) {
-         alert(errorThrown);
+         alert(textStatus + errorThrown);
       }
     }); 
